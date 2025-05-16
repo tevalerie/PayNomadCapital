@@ -4,6 +4,7 @@ import Home from "./components/home";
 import SignupPage from "./pages/SignupPage";
 import OtpVerificationPage from "./pages/OtpVerificationPage";
 import ErrorBoundary from "./components/ErrorBoundary";
+import LandingPage from "./components/landing/LandingPage";
 import routes from "tempo-routes";
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
     <ErrorBoundary>
       {tempoRoutes}
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route
-          path="/"
+          path="/home"
           element={
             <div className="bg-white min-h-screen">
               <Home />
